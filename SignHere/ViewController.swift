@@ -15,6 +15,10 @@ class ViewController: UIViewController {
   @IBOutlet weak var authoriseButton: UIButton!
   @IBOutlet weak var thumbImage: UIImageView!
 
+  override func viewDidLoad() {
+    webView.scalesPageToFit = true
+  }
+
   override func viewDidAppear(_ animated: Bool) {
     let targetURL = Bundle.main.url(forResource: "sample", withExtension: "pdf")!
     let data: Data?
@@ -62,7 +66,7 @@ class ViewController: UIViewController {
   func showAlertWithTitle(_ title:String, message:String ) {
     let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
     
-    let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
     alertVC.addAction(okAction)
     
     DispatchQueue.main.async {
