@@ -71,12 +71,9 @@ class ViewController: UIViewController {
     context.evaluatePolicy(
       .deviceOwnerAuthenticationWithBiometrics,
       localizedReason: "Please authenticate to sign this document.",
-//      localizedReason: "Please authenticate to view this document.",
       reply: { [unowned self] (success, error) -> Void in
         if (success) {
           self.signDocument()
-//          self.showAlertWithTitle("Awesome", message: "Thanks for signing this document.")
-//          self.showPdf()
         } else {
           if let error = error {
             self.showAlertWithTitle("Error", message: error.localizedDescription)
@@ -91,14 +88,15 @@ class ViewController: UIViewController {
   }
   
   func showAlertWithTitle(_ title:String, message:String ) {
+    let alertVC = alertController(title: title, message: message)
+    DispatchQueue.main.async { self.present(alertVC, animated: true, completion: nil) }
+  }
+
+  func alertController(title: String, message: String) -> UIAlertController {
     let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-    
     let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
     alertVC.addAction(okAction)
-    
-    DispatchQueue.main.async {
-      self.present(alertVC, animated: true, completion: nil)
-    }
+    return alertVC
   }
 }
 
