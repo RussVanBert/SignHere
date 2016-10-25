@@ -3,6 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,13 +24,44 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKR-Zf-qaW">
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Borders" translatesAutoresizingMaskIntoConstraints="NO" id="9Xi-bA-Yaj"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvn-Wo-NRR">
+                                <state key="normal" title="Reject">
+                                    <color key="titleColor" red="1" green="0.01076049623" blue="0.023517226320000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reject:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mYO-3a-S7b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6w-Aq-YMo">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="VcW-6A-QNn"/>
+                                    <constraint firstAttribute="width" constant="186" id="dUa-JW-vs6"/>
+                                </constraints>
+                                <state key="normal" title="Accept">
+                                    <color key="titleColor" red="0.18945383460000001" green="0.60296792330000004" blue="0.060588866169999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="accept:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IRY-h9-cEF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="xKR-Zf-qaW" secondAttribute="trailing" id="8N3-7G-pFx"/>
-                            <constraint firstItem="xKR-Zf-qaW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="D9G-bl-Ro6"/>
-                            <constraint firstItem="xKR-Zf-qaW" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="a3O-s9-Lhr"/>
-                            <constraint firstItem="xKR-Zf-qaW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hsM-kM-vHM"/>
+                            <constraint firstItem="xKR-Zf-qaW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2tC-TK-KWU"/>
+                            <constraint firstItem="hvn-Wo-NRR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="16" id="Ecd-Vl-GN4"/>
+                            <constraint firstItem="9Xi-bA-Yaj" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="JWy-1B-0y1"/>
+                            <constraint firstItem="xKR-Zf-qaW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="KjK-2q-5SE"/>
+                            <constraint firstItem="hvn-Wo-NRR" firstAttribute="baseline" secondItem="d6w-Aq-YMo" secondAttribute="firstBaseline" id="Ol9-fg-wks"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="d6w-Aq-YMo" secondAttribute="bottom" constant="1" id="URh-aK-Wj6"/>
+                            <constraint firstItem="d6w-Aq-YMo" firstAttribute="baseline" secondItem="hvn-Wo-NRR" secondAttribute="firstBaseline" id="VoU-Fa-tUe"/>
+                            <constraint firstItem="9Xi-bA-Yaj" firstAttribute="leading" secondItem="d6w-Aq-YMo" secondAttribute="leading" id="Z6L-Ox-CP8"/>
+                            <constraint firstAttribute="trailing" secondItem="xKR-Zf-qaW" secondAttribute="trailing" id="Zby-nS-95q"/>
+                            <constraint firstItem="9Xi-bA-Yaj" firstAttribute="top" secondItem="hvn-Wo-NRR" secondAttribute="top" id="Znk-Pn-edx"/>
+                            <constraint firstItem="d6w-Aq-YMo" firstAttribute="top" secondItem="hvn-Wo-NRR" secondAttribute="top" id="gZ2-7B-aWa"/>
+                            <constraint firstItem="d6w-Aq-YMo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="kxY-XH-uos"/>
+                            <constraint firstItem="d6w-Aq-YMo" firstAttribute="top" secondItem="xKR-Zf-qaW" secondAttribute="bottom" constant="8" symbolic="YES" id="m3k-SF-3ZX"/>
+                            <constraint firstItem="hvn-Wo-NRR" firstAttribute="leading" secondItem="d6w-Aq-YMo" secondAttribute="trailing" constant="-1" id="qcP-e6-lAN"/>
                         </constraints>
                     </view>
                     <connections>
@@ -39,4 +73,7 @@
             <point key="canvasLocation" x="140" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Borders" width="375" height="106"/>
+    </resources>
 </document>
