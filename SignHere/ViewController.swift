@@ -20,6 +20,9 @@ class ViewController: UIViewController {
   }
 
   override func viewDidAppear(_ animated: Bool) {
+  }
+
+  func showPdf() {
     let targetURL = Bundle.main.url(forResource: "sample", withExtension: "pdf")!
     let data: Data?
     do {
@@ -45,11 +48,11 @@ class ViewController: UIViewController {
   func evaluate(_ context: LAContext, _ sender: UIButton) {
     context.evaluatePolicy(
       .deviceOwnerAuthenticationWithBiometrics,
-      localizedReason: "Sign this document?",
+      localizedReason: "Please authenticate to view this document.",
       reply: { [unowned self] (success, error) -> Void in
         if (success) {
-          self.showAlertWithTitle("Awesome", message: "Thanks for signing this document.")
-          
+//          self.showAlertWithTitle("Awesome", message: "Thanks for signing this document.")
+          self.showPdf()
         } else {
           if let error = error {
             self.showAlertWithTitle("Error", message: error.localizedDescription)
