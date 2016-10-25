@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D45D717A1DBF04FC00F79062 /* sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D45D71791DBF04FC00F79062 /* sample.pdf */; };
 		D46F1BD21DBDD470006961C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46F1BD11DBDD470006961C5 /* AppDelegate.swift */; };
 		D46F1BD41DBDD470006961C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46F1BD31DBDD470006961C5 /* ViewController.swift */; };
 		D46F1BD71DBDD470006961C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46F1BD51DBDD470006961C5 /* Main.storyboard */; };
 		D46F1BD91DBDD470006961C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46F1BD81DBDD470006961C5 /* Assets.xcassets */; };
 		D46F1BDC1DBDD470006961C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46F1BDA1DBDD470006961C5 /* LaunchScreen.storyboard */; };
-		D46F1BE51DBDD4E8006961C5 /* sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D46F1BE41DBDD4E8006961C5 /* sample.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D45D71791DBF04FC00F79062 /* sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample.pdf; sourceTree = "<group>"; };
 		D46F1BCE1DBDD470006961C5 /* SignHere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignHere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46F1BD11DBDD470006961C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D46F1BD31DBDD470006961C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +24,6 @@
 		D46F1BD81DBDD470006961C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D46F1BDB1DBDD470006961C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D46F1BDD1DBDD470006961C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D46F1BE41DBDD4E8006961C5 /* sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = sample.pdf; path = Pdfs/sample.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 		D46F1BE31DBDD4D4006961C5 /* pdfs */ = {
 			isa = PBXGroup;
 			children = (
-				D46F1BE41DBDD4E8006961C5 /* sample.pdf */,
+				D45D71791DBF04FC00F79062 /* sample.pdf */,
 			);
 			name = pdfs;
 			sourceTree = "<group>";
@@ -135,10 +135,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D46F1BE51DBDD4E8006961C5 /* sample.pdf in Resources */,
 				D46F1BDC1DBDD470006961C5 /* LaunchScreen.storyboard in Resources */,
 				D46F1BD91DBDD470006961C5 /* Assets.xcassets in Resources */,
 				D46F1BD71DBDD470006961C5 /* Main.storyboard in Resources */,
+				D45D717A1DBF04FC00F79062 /* sample.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
