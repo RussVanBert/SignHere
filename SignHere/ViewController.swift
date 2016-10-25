@@ -20,6 +20,10 @@ class ViewController: UIViewController {
   }
 
   @IBAction func accept(_ sender: AnyObject) {
+    self.authenticate()
+  }
+
+  func signDocument() {
     let urlString = "http://52.65.146.41:3001/api/document/eb0a6886-8da2-4240-aab6-a7599ed4993f/accept/1"
     let fullUrl = URL(string: urlString)!
     var request = URLRequest(url: fullUrl, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 30)
@@ -29,7 +33,7 @@ class ViewController: UIViewController {
     let dataTask = session.dataTask(with: request)
     dataTask.resume()
 
-    showAlertWithTitle("Document signed", message: "The document has been signed.")
+    showAlertWithTitle("Awesome", message: "The document has been signed.")
   }
 
   @IBAction func reject(_ sender: AnyObject) {
@@ -37,7 +41,7 @@ class ViewController: UIViewController {
   }
 
   override func viewDidAppear(_ animated: Bool) {
-    authenticate()
+    showPdf()
   }
 
   func showPdf() {
@@ -66,11 +70,13 @@ class ViewController: UIViewController {
   func evaluate(_ context: LAContext) {
     context.evaluatePolicy(
       .deviceOwnerAuthenticationWithBiometrics,
-      localizedReason: "Please authenticate to view this document.",
+      localizedReason: "Please authenticate to sign this document.",
+//      localizedReason: "Please authenticate to view this document.",
       reply: { [unowned self] (success, error) -> Void in
         if (success) {
+          self.signDocument()
 //          self.showAlertWithTitle("Awesome", message: "Thanks for signing this document.")
-          self.showPdf()
+//          self.showPdf()
         } else {
           if let error = error {
             self.showAlertWithTitle("Error", message: error.localizedDescription)
