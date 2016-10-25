@@ -20,6 +20,7 @@ class ViewController: UIViewController {
   }
 
   override func viewDidAppear(_ animated: Bool) {
+    authenticate()
   }
 
   func showPdf() {
@@ -34,18 +35,18 @@ class ViewController: UIViewController {
     }
   }
 
-  @IBAction func authorise(_ sender: UIButton) {
+  func authenticate() {
     let context = LAContext()
     var error: NSError?
     guard context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) else {
       showAlertViewIfNoBiometricSensorHasBeenDetected()
       return
     }
-    
-    evaluate(context, sender)
+
+    evaluate(context)
   }
-  
-  func evaluate(_ context: LAContext, _ sender: UIButton) {
+
+  func evaluate(_ context: LAContext) {
     context.evaluatePolicy(
       .deviceOwnerAuthenticationWithBiometrics,
       localizedReason: "Please authenticate to view this document.",

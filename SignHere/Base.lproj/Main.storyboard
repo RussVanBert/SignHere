@@ -21,38 +21,16 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKR-Zf-qaW">
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Thumb" translatesAutoresizingMaskIntoConstraints="NO" id="8NK-j3-PD8">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="122" id="Fkr-2F-LUr"/>
-                                    <constraint firstAttribute="width" constant="110" id="uRu-Vh-c5U"/>
-                                </constraints>
-                            </imageView>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ats-Wr-fh8">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="6Yb-zH-G2E"/>
-                                    <constraint firstAttribute="height" constant="117" id="Omt-bP-gC6"/>
-                                </constraints>
-                                <state key="normal" title="Authenticate"/>
-                                <connections>
-                                    <action selector="authorise:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yA6-CV-2gu"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="xKR-Zf-qaW" secondAttribute="trailing" id="8N3-7G-pFx"/>
                             <constraint firstItem="xKR-Zf-qaW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="D9G-bl-Ro6"/>
-                            <constraint firstItem="8NK-j3-PD8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="517" id="JSe-wn-jBO"/>
                             <constraint firstItem="xKR-Zf-qaW" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="a3O-s9-Lhr"/>
-                            <constraint firstItem="ats-Wr-fh8" firstAttribute="top" secondItem="8NK-j3-PD8" secondAttribute="top" id="aVv-LI-kLt"/>
                             <constraint firstItem="xKR-Zf-qaW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hsM-kM-vHM"/>
-                            <constraint firstItem="ats-Wr-fh8" firstAttribute="centerX" secondItem="8NK-j3-PD8" secondAttribute="centerX" id="lcl-VV-8xo"/>
-                            <constraint firstItem="8NK-j3-PD8" firstAttribute="centerX" secondItem="xKR-Zf-qaW" secondAttribute="centerX" id="uYT-XS-1wV"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="authoriseButton" destination="ats-Wr-fh8" id="Yr0-hc-RCf"/>
-                        <outlet property="thumbImage" destination="8NK-j3-PD8" id="7rf-ZL-xDx"/>
                         <outlet property="webView" destination="xKR-Zf-qaW" id="Egb-B2-wlH"/>
                     </connections>
                 </viewController>
@@ -61,7 +39,4 @@
             <point key="canvasLocation" x="140" y="138.98050974512745"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Thumb" width="55" height="61"/>
-    </resources>
 </document>
