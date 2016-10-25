@@ -32,7 +32,7 @@
                                     <constraint firstAttribute="width" constant="110" id="6Yb-zH-G2E"/>
                                     <constraint firstAttribute="height" constant="117" id="Omt-bP-gC6"/>
                                 </constraints>
-                                <state key="normal" title="Authorise"/>
+                                <state key="normal" title="Authenticate"/>
                                 <connections>
                                     <action selector="authorise:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yA6-CV-2gu"/>
                                 </connections>
